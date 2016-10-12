@@ -1,45 +1,55 @@
-app.controller('MainController', 
-  ['$scope', function($scope) {
-    $scope.title = 'Top Sellers in Books';
-    $scope.promo = '40% off';
-    $scope.products = [
-      {
-        name: 'The Book of Trees',
-        price: 19,
-        pubdate: new Date('2014', '03', '08'),
-        likes: 0,
-        dislikes: 0,
-        cover: 'img/little_mac.jpg'
-      },
-      {
-        name: 'Program or be Programmed',
-        price: 8,
-        pubdate: new Date('2013', '08', '01'),
-        likes: 0,
-        dislikes: 0,
-        cover: 'img/502ecd75cc378f036c2e26a69c81a91ccc422cce.jpg'
-      },
-      {
-        name: 'Memoirs of a Geisha',
-        price: 90,
-        likes: 0,
-        dislikes: 0,
-        pubdate: new Date('2002', '09', '04'),
-        cover: 'img/lis.jpg'
-      },
-      {
-        name: 'Golden Temple',
-        price: 35,
-        likes: 0,
-        dislikes: 0,
-        pubdate: new Date('2004', '05', '05'),
-        cover: 'img/temple.jpg'
-      }
-    ];
-    $scope.plusOne = function(index) {
-      $scope.products[index].likes +=1;
-    };
-    $scope.minusOne = function(index) {
-      $scope.products[index].dislikes +=1;
-    };
+app.controller('MainController', ['$scope', function($scope) {
+  // $scope.move = {
+  //   icon: 'img/lis.jpg',
+  //   title: 'MOVE',
+  //   developer: 'MOVE, Inc.',
+  //   price: 0.99
+  // };
+
+  // $scope.shutterbugg = {
+  //   icon: 'img/little_mac.jpg',
+  //   title: 'Shutterbugg',
+  //   developer: 'Chico Dusty',
+  //   price: 2.99
+  // };
+
+  // $scope.gameboard = {
+  //   icon: 'img/temple.jpg',
+  //   title: 'Gameboard',
+  //   developer: 'Armando P.',
+  //   price: 1.99
+  // };
+
+  // $scope.forecast = {
+  //   icon: 'img/owl.jpg',
+  //   title: 'Forecast',
+  //   developer: 'Forecast',
+  //   price: 1.99
+  // };
+  $scope.apps = [
+    {
+      icon: 'img/owl.jpg',
+      title: 'MOVE', 
+      developer: 'MOVE, Inc.', 
+      price: 0.99 
+    },
+    {
+      icon: 'img/lis.jpg',
+      title: 'Shutterbugg', 
+      developer: 'Chico Dusty', 
+      price: 2.99
+    },
+    {
+      icon: 'img/temple.jpg',
+      title: 'Pokemon',
+      developer: 'Niantik',
+      price: 4.99
+    },
+    {
+      icon: 'img/little_mac.jpg',
+      title: 'Angry Birds',
+      developer: 'Arrrrgh',
+      price: 1.99
+    }
+  ]
 }]);

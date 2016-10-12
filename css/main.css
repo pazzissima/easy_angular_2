@@ -12,7 +12,9 @@ html, body {
 .header img {
    display: inline-block;
 }
-
+img.icon {
+   max-width: 400px;
+}
 .header h1 {
    display: inline-block;
 }
@@ -35,7 +37,8 @@ html, body {
  background-color: #DDDDDD ;
  color: #999999 ;
  font-size: 20px;
- margin: 0 0 40px 0;
+ max-width: 400px;
+ margin-bottom: 40px;
  padding: 20px 0;
 }
 
