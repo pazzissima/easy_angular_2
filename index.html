@@ -7,11 +7,13 @@
     <!-- Include the AngularJS library -->
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
   </head>
-  <body ng-app="AppMarketApp">
+  <body ng-init="names=['John Smith', 'John Doe', 'Jane Doe']">
     Name:
     <br/>
-    <input type="text" ng-model="name"/> {{ name }}
-
+    <input type="text" ng-model="name" /> {{ name }}
+    <ul>
+      <li ng-repeat="personName in names">{{ personName }}</li>
+    </ul>
 
   </body>
 </html>
