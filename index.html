@@ -7,12 +7,12 @@
     <!-- Include the AngularJS library -->
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
   </head>
-  <body data-ng-init="names=[{name:'John Smith',city:'Phoenix'}, {name:'John Doe',city:'New York'}, {name:'Jane Doe',city:'San Francisco'}]">
+  <body data-ng-init="customers=[{name:'John Smith',city:'Phoenix'}, {name:'John Doe',city:'New York'}, {name:'Jane Doe',city:'San Francisco'}]">
     Name:
     <br/>
     <input type="text" ng-model="name" /> {{ name }}
     <ul>
-      <li data-ng-repeat="cust in names">{{ cust.name }} - {{ cust.city }}</li>
+      <li data-ng-repeat="cust in customers | filter: name">{{ cust.name }} - {{ cust.city }}</li>
     </ul>
 
   </body>
